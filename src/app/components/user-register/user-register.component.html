@@ -1,0 +1,66 @@
+<!--
+
+  User: ID,
+  user Name,
+  email,
+  password,
+  retype password,
+  security question,
+  security question answer,
+  first name,
+  last name,
+  employee number,
+  address,
+
+-->
+{{ model | json }}
+
+<form class=form>
+  <div class="form-group">
+    <label for="txtUserID">User ID</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.id" name="id" placeholder="12345">
+  </div>
+  <div class="form-group">
+    <label for="txtUserName">User Name</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.userName" name="userName"placeholder="UserName">
+  </div>
+  <div class="form-group">
+    <label for="txtEmail">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.email" name="email"placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="txtPassword">Password</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.password" name="password"placeholder="xxx1234$$%">
+  </div>
+  <div class="form-group">
+    <label for="txtRetypePassword">Retype Password</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="retypePassword" name="retypePassword"placeholder="xxx1234$$%">
+  </div>
+  <div class="form-group">
+    <label for="txtSecurityQuestion">Security Question</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.securityQuestion" name="securityQuestion Answer"placeholder="Favorite Color">
+  </div>
+  <div class="form-group">
+    <label for="txtSecurityQuestionAnswer">Security Question Answer</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.securityQuestionAnswer" name="firstName"placeholder="Yellow">
+  </div>
+  <div class="form-group">
+    <label for="txtFirstName">First Name</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.firstName" name="lastName"placeholder="John">
+  </div>
+  <div class="form-group">
+    <label for="txtLastName">Last Name</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.lastName" name="employeeNumber"placeholder="Doe">
+  </div>
+  <div class="form-group">
+    <label for="txtEmployeeNumber">Employee Number</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.fullAddress" name="fullAddress"placeholder="123456">
+  </div>
+  <div class="form-group">
+    <label for="txtAddress">Address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="model.fullAddress" name="userName"placeholder="#3 Market Street, Yaxley, UK PE43QJ">
+  </div>
+  <div>
+    <button (click)="saveUser()" type="button" class="btn btn-secondary btn-lg">Register</button>
+  </div>
+</form>
